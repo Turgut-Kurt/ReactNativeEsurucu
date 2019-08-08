@@ -5,12 +5,36 @@ import CenterIcon from '../component/CenterIcon';
 import HeadBodyIcon from '../component/HeadBodyIcon';
 import Content from '../component/Content';
 import ButtonFooter from '../component/ButtonFooter';
-import HeadGradient from '../component/HeadGradient';
+import LoadingPage from './LoadingPage';
+
 
 
 export default class extends Component {
-    render() {
+    constructor(props) {
+        super(props);
 
+        this.state = {isLoading: true}
+    }
+    performTimeConsumingTask = async() => {
+        return new Promise((resolve) =>
+            setTimeout(
+                () => { resolve('result') },
+                2000
+            )
+        );
+    };
+    async componentDidMount() {
+
+        const data = await this.performTimeConsumingTask();
+
+        if (data !== null) {
+            this.setState({ isLoading: false });
+        }
+    }
+    render() {
+        if (this.state.isLoading) {
+            return <LoadingPage/>;
+        }
         return (
             <View style={styles.container}>
                 <View style={styles.header}>
@@ -174,7 +198,7 @@ const styles = StyleSheet.create({
         flex: 30,
 
         flexDirection: "column",
-        backgroundColor:"#0871E6",
+        backgroundColor: "#0871E6",
     },
     content: {
         flex: 60,
