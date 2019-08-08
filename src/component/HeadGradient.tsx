@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
+import RightIcon from '../component/RightIcon';
+import CenterIcon from '../component/CenterIcon';
+import HeadBodyIcon from '../component/HeadBodyIcon';
 export default class HeadGradient extends Component {
   render() {
     return (
@@ -10,6 +13,43 @@ export default class HeadGradient extends Component {
                 style={styles.headView}
             >
             </LinearGradient>
+            <View style={styles.header}>
+
+                <View style={styles.topheader}>
+
+                    <CenterIcon
+                        imgSource={require('../assets/1x/e-surucu3.png')}
+                        locationX="flex-start"
+                        locationY="flex-start"
+                    />
+                    <View style={styles.freeSpace}><Text></Text></View>
+                    <CenterIcon
+                        imgSource={require('../assets/1x/e-surucu3.png')}
+                        locationX="center"
+                        locationY="flex-start"
+                    />
+                    <View style={styles.freeSpace}><Text> </Text></View>
+                    <RightIcon
+                        imgSource={require('../assets/1x/profile_human.png')}
+                        locationX="flex-end"
+                        locationY="center"
+
+                    />
+                    <RightIcon
+                        imgSource={require('../assets/1x/turn-notifications-on-button.png')}
+                        locationX="flex-start"
+                        locationY="center"
+
+                    />
+
+                </View>
+                <HeadBodyIcon
+                    imgSource={require('../assets/1x/phone.png')}
+                    locationX="center"
+                    locationY="center"
+                />
+
+            </View>
         </View>
     );
   }
@@ -17,30 +57,40 @@ export default class HeadGradient extends Component {
 
 const styles = StyleSheet.create({
     container: {
-        flex: 1,
+        flex: 30,
         flexDirection: "row",
-        width: "100%",
-        height: "100%",
         justifyContent: "center",
-        borderWidth: 1,
-        borderColor: "red",
-        backgroundColor: "#ffffff"
+        backgroundColor: null
     },
     headView: {
         position: "absolute",
         alignItems: "center",
         justifyContent: "center",
-        width: "200%",
-        height: "60%",
-        borderWidth: 10,
+        width: "210%",
+        height: "210%",
+        borderWidth: 16,
         borderColor: '#00296E',
         borderBottomRightRadius: 400,
         borderBottomLeftRadius: 400,
-        top: "-30%",
+        top: "-110%",
         /*transform: [{
             scaleX: 1,
             //rotate : "90deg"
         }],*/
+    },
+    topheader: {
+
+        flex: 10,
+        flexDirection: "row"
+    },
+    header: {
+        flex: 30,
+
+        flexDirection: "column",
+    },
+    freeSpace: {
+
+        flex: 2,
     },
 
 

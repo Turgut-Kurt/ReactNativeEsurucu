@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View,Image } from 'react-native';
-
+import {CirclesLoader,TextLoader,} from 'react-native-indicator';
 export default class LoadingPage extends Component {
   render() {
 
@@ -13,7 +13,7 @@ export default class LoadingPage extends Component {
               />
           </View>
           <View style={styles.middle1}>
-              <Text >YÜKLENİYOR...</Text>
+              <TextLoader text="YÜKLENİYOR" />
           </View>
           <View style={styles.middle2}>
               <Image

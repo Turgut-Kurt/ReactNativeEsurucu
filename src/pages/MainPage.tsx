@@ -1,11 +1,10 @@
 import React, {Component} from 'react';
-import {StyleSheet, Text, View} from 'react-native';
-import RightIcon from '../component/RightIcon';
-import CenterIcon from '../component/CenterIcon';
-import HeadBodyIcon from '../component/HeadBodyIcon';
+import {StyleSheet, Text, View,ImageBackground} from 'react-native';
+
 import Content from '../component/Content';
 import ButtonFooter from '../component/ButtonFooter';
 import LoadingPage from './LoadingPage';
+import HeadGradient from "../component/HeadGradient";
 
 
 
@@ -19,7 +18,7 @@ export default class extends Component {
         return new Promise((resolve) =>
             setTimeout(
                 () => { resolve('result') },
-                2000
+                200
             )
         );
     };
@@ -37,43 +36,8 @@ export default class extends Component {
         }
         return (
             <View style={styles.container}>
-                <View style={styles.header}>
+                <HeadGradient/>
 
-                    <View style={styles.topheader}>
-
-                        <CenterIcon
-                            imgSource={require('../assets/1x/e-surucu3.png')}
-                            locationX="flex-start"
-                            locationY="flex-start"
-                        />
-                        <View style={styles.freeSpace}><Text></Text></View>
-                        <CenterIcon
-                            imgSource={require('../assets/1x/e-surucu3.png')}
-                            locationX="center"
-                            locationY="flex-start"
-                        />
-                        <View style={styles.freeSpace}><Text> </Text></View>
-                        <RightIcon
-                            imgSource={require('../assets/1x/profile_human.png')}
-                            locationX="flex-end"
-                            locationY="center"
-
-                        />
-                        <RightIcon
-                            imgSource={require('../assets/1x/turn-notifications-on-button.png')}
-                            locationX="flex-start"
-                            locationY="center"
-
-                        />
-
-                    </View>
-                    <HeadBodyIcon
-                        imgSource={require('../assets/1x/phone.png')}
-                        locationX="center"
-                        locationY="center"
-                    />
-
-                </View>
                 <View style={styles.content}>
                     <View style={styles.contentFlex}>
                         <Content
@@ -194,12 +158,7 @@ const styles = StyleSheet.create({
         flexDirection: "column",
 
     },
-    header: {
-        flex: 30,
 
-        flexDirection: "column",
-        backgroundColor: "#0871E6",
-    },
     content: {
         flex: 60,
         backgroundColor: 'white',
@@ -219,15 +178,8 @@ const styles = StyleSheet.create({
         flexDirection: "row",
         backgroundColor: 'red',
     },
-    topheader: {
 
-        flex: 10,
-        flexDirection: "row"
-    },
-    freeSpace: {
 
-        flex: 2,
-    },
     ImageContent: {
         flex: 2,
         flexDirection: "row",
