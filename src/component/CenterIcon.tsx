@@ -9,7 +9,7 @@ export default class CenterIcon extends Component {
       const locationY = this.props.locationY;
       const imgSource = this.props.imgSource;
     return (
-        <View style={styles(locationX,locationY).box13}>
+        <View style={styles(locationX,locationY).container}>
             <Image
                 source={imgSource}
                 style={styles(null,null).img}
@@ -24,7 +24,7 @@ CenterIcon.propTypes = {
     locationY : PropTypes.string.isRequired,
 };
 const styles =(locationX,locationY) => StyleSheet.create({
-    box13: {
+    container: {
 
         flex: 2,
         alignItems: locationX,

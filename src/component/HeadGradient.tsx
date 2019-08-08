@@ -44,9 +44,9 @@ export default class HeadGradient extends Component {
 
                 </View>
                 <HeadBodyIcon
-                    imgSource={require('../assets/1x/phone.png')}
+                    imgSource={require('../assets/1x/ozgunes.png')}
                     locationX="center"
-                    locationY="center"
+                    locationY="flex-start"
                 />
 
             </View>
@@ -57,7 +57,7 @@ export default class HeadGradient extends Component {
 
 const styles = StyleSheet.create({
     container: {
-        flex: 30,
+        flex: 35,
         flexDirection: "row",
         justifyContent: "center",
         backgroundColor: null
@@ -66,13 +66,13 @@ const styles = StyleSheet.create({
         position: "absolute",
         alignItems: "center",
         justifyContent: "center",
-        width: "210%",
-        height: "210%",
-        borderWidth: 16,
+        width: "180%",
+        height: "180%",
+        borderWidth: 15,
         borderColor: '#00296E',
         borderBottomRightRadius: 400,
         borderBottomLeftRadius: 400,
-        top: "-110%",
+        top: "-80%",
         /*transform: [{
             scaleX: 1,
             //rotate : "90deg"
@@ -80,11 +80,11 @@ const styles = StyleSheet.create({
     },
     topheader: {
 
-        flex: 10,
+        flex: 8,
         flexDirection: "row"
     },
     header: {
-        flex: 30,
+        flex: 35,
 
         flexDirection: "column",
     },

@@ -10,7 +10,7 @@ export default class HeadBodyIcon extends Component {
         const imgSource = this.props.imgSource;
         return (
             <View style={styles(locationX, locationY).main}>
-                <View style={styles(null, null).box3}>
+                <View style={styles(null, null).frame}>
                     <Image
                         source={imgSource}
                         style={styles(null, null).img}
@@ -31,7 +31,7 @@ HeadBodyIcon.propTypes = {
 const styles = (locationX, locationY) => StyleSheet.create({
     main: {
 
-        flex: 30,
+        flex: 22,
         alignItems: locationX,
         justifyContent: locationY,
 
@@ -43,14 +43,14 @@ const styles = (locationX, locationY) => StyleSheet.create({
         borderRadius: 40,
         resizeMode: "cover",
     },
-    box3: {
+    frame: {
         alignItems: "center",
         justifyContent: "center",
-        width: 120,
-        height: 120,
-        borderWidth: 5,
+        width: 110,
+        height: 110,
+        borderWidth: 10,
         borderColor: '#2187FF',
-        borderRadius: 60,
+        borderRadius: 55,
     },
     text: {
         fontWeight:"bold",

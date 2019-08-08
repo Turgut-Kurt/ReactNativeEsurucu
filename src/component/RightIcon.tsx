@@ -11,7 +11,7 @@ export default class RightIcon extends Component {
         const locationY = this.props.locationY;
         const imgSource = this.props.imgSource;
         return (
-            <View style={styles(locationX,locationY).box15}>
+            <View style={styles(locationX,locationY).container}>
                 <Image
                     source={imgSource}
                     style={styles(null,null).img}
@@ -27,7 +27,7 @@ RightIcon.propTypes = {
     locationY : PropTypes.string.isRequired,
 };
 const styles =(locationX,locationY) => StyleSheet.create({
-    box15: {
+    container: {
 
         flex: 1,
         alignItems: locationX,

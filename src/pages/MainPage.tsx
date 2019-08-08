@@ -160,11 +160,11 @@ const styles = StyleSheet.create({
     },
 
     content: {
-        flex: 60,
+        flex: 55,
         backgroundColor: 'white',
     },
     contentFlex: {
-        flex: 12,
+        flex: 11,
         flexDirection: "row",
         backgroundColor: 'red',
     },
