@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {StyleSheet, Text, View,ImageBackground} from 'react-native';
+import {StyleSheet, Text, View} from 'react-native';
 
 import Content from '../component/Content';
 import ButtonFooter from '../component/ButtonFooter';
@@ -18,7 +18,7 @@ export default class extends Component {
         return new Promise((resolve) =>
             setTimeout(
                 () => { resolve('result') },
-                200
+                30
             )
         );
     };
@@ -174,7 +174,7 @@ const styles = StyleSheet.create({
         backgroundColor: 'yellow',
     },
     footer: {
-        flex: 10,
+        flex: 9,
         flexDirection: "row",
         backgroundColor: 'red',
     },

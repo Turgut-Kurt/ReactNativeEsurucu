@@ -31,7 +31,8 @@ HeadBodyIcon.propTypes = {
 const styles = (locationX, locationY) => StyleSheet.create({
     main: {
 
-        flex: 22,
+        flex: 28,
+        flexDirection:"column",
         alignItems: locationX,
         justifyContent: locationY,
 
@@ -44,6 +45,7 @@ const styles = (locationX, locationY) => StyleSheet.create({
         resizeMode: "cover",
     },
     frame: {
+
         alignItems: "center",
         justifyContent: "center",
         width: 110,

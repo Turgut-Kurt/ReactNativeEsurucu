@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View,Image } from 'react-native';
 import PropTypes from 'prop-types';
-import RightIcon from "./RightIcon";
+
 
 export default class CenterIcon extends Component {
   render() {
@@ -25,7 +25,6 @@ CenterIcon.propTypes = {
 };
 const styles =(locationX,locationY) => StyleSheet.create({
     container: {
-
         flex: 2,
         alignItems: locationX,
         justifyContent: locationY
