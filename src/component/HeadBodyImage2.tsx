@@ -13,7 +13,7 @@ export default class HeadBodyImage2 extends Component {
         const marginLeft = this.props.marginLeft;
         const marginTop = this.props.marginTop;
         return (
-            <View style={styles(locationX, locationY,null,null,null).main}>
+            <View style={styles(locationX, locationY,null,null,null,null).main}>
                 <Image
                     source={imgSource}
                     style={styles(null, null,width,height,marginLeft,marginTop).img}

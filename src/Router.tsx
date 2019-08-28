@@ -34,6 +34,9 @@ const AppNavigator = createStackNavigator({
     OnlineKitapPage: {
         screen: OnlineKitapPage
     },
+    OnlineKayitPage: {
+        screen: OnlineKayitPage
+    },
     EhliyetSiniflariPage: {
         screen: EhliyetSiniflariPage
     },
@@ -48,7 +51,7 @@ const AppNavigator = createStackNavigator({
     },
 
 }, {
-    initialRouteName: 'TrafikIsaretPage',
+    initialRouteName: 'MainPage',
     headerMode: "none"
 });
 

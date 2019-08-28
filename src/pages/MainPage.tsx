@@ -8,6 +8,7 @@ import HeadGradient from "../component/HeadGradient";
 import HeadTop from "../component/HeadTop";
 import HeadBodyImage from "../component/HeadBodyImage";
 import HeadBodyText from "../component/HeadBodyText";
+import ImageContent from "../component/ImageContent";
 
 
 export default class MainPage extends Component {
@@ -68,6 +69,12 @@ export default class MainPage extends Component {
                         <Content
                             imgSource={require('../assets/1x/Cine_Camera_PNG_Clip_Art-1685.png')}
                             circlebg={"#BEBEBE"}
+                            ImagelocationX={"flex-start"}
+                            ImagelocationY={"flex-start"}
+                            Imgwidth={63}
+                            Imgheight={60}
+                            ImageMarginTop={0}
+                            ImageMarginLeft={0}
                             text={`E-SINAV
 TANITIM VİDEOSU`}
                             btntext={"HEMEN İZLE"}
@@ -77,6 +84,12 @@ TANITIM VİDEOSU`}
                         <Content
                             imgSource={require('../assets/1x/play.png')}
                             circlebg={"#FBE7C7"}
+                            Imgwidth={40}
+                            Imgheight={40}
+                            ImagelocationX={"center"}
+                            ImagelocationY={"flex-start"}
+                            ImageMarginTop={0}
+                            ImageMarginLeft={0}
                             text={`DİREKSİYON
 SINAVI VİDEOSU`}
                             btntext={"HEMEN İZLE"}
@@ -88,6 +101,12 @@ SINAVI VİDEOSU`}
                         <Content
                             imgSource={require('../assets/1x/motor.png')}
                             circlebg={"#2D8BA3"}
+                            ImagelocationX={"center"}
+                            ImagelocationY={"flex-start"}
+                            Imgwidth={85}
+                            Imgheight={60}
+                            ImageMarginTop={0}
+                            ImageMarginLeft={0}
                             text={`MOTOSİKLET
 SINAV VİDEOSU`}
                             btntext={"HEMEN İZLE"}
@@ -97,6 +116,12 @@ SINAV VİDEOSU`}
                         <Content
                             imgSource={require('../assets/1x/book.png')}
                             circlebg={"black"}
+                            ImagelocationX={"center"}
+                            ImagelocationY={"center"}
+                            Imgwidth={60}
+                            Imgheight={55}
+                            ImageMarginTop={0}
+                            ImageMarginLeft={0}
                             text={`ONLİNE
 KİTAP`}
                             btntext={"İNCELE"}
@@ -108,6 +133,12 @@ KİTAP`}
                         <Content
                             imgSource={require('../assets/1x/student.png')}
                             circlebg={"#DD6513"}
+                            ImagelocationX={"center"}
+                            ImagelocationY={"flex-start"}
+                            Imgwidth={70}
+                            Imgheight={55}
+                            ImageMarginTop={0}
+                            ImageMarginLeft={0}
                             text={`EHLİYET
 SINAVLARI`}
                             btntext={"Detaylı Bilgi"}
@@ -117,6 +148,12 @@ SINAVLARI`}
                         <Content
                             imgSource={require('../assets/1x/takvim.png')}
                             circlebg={"black"}
+                            ImagelocationX={"flex-start"}
+                            ImagelocationY={"flex-start"}
+                            Imgwidth={60}
+                            Imgheight={60}
+                            ImageMarginTop={0}
+                            ImageMarginLeft={0}
                             text={`EHLİYET
 RANDEVUSU`}
                             btntext={"Randevu Al"}
@@ -128,6 +165,12 @@ RANDEVUSU`}
                         <Content
                             imgSource={require('../assets/1x/path.png')}
                             circlebg={"#F9B200"}
+                            ImagelocationX={"center"}
+                            ImagelocationY={"center"}
+                            Imgwidth={50}
+                            Imgheight={52}
+                            ImageMarginTop={0}
+                            ImageMarginLeft={0}
                             text={`EĞİTİM
 ALANI`}
                             btntext={"Detaylı Bilgi"}
@@ -137,6 +180,12 @@ ALANI`}
                         <Content
                             imgSource={require('../assets/1x/touch.png')}
                             circlebg={"#97A09B"}
+                            ImagelocationX={"flex-start"}
+                            ImagelocationY={"center"}
+                            Imgwidth={40}
+                            Imgheight={47}
+                            ImageMarginTop={12}
+                            ImageMarginLeft={12}
                             text={`ONLİNE
 KAYIT`}
                             btntext={"Kayıt Ol"}
@@ -148,6 +197,12 @@ KAYIT`}
                         <Content
                             imgSource={require('../assets/1x/lamb.png')}
                             circlebg={"#F1A81A"}
+                            ImagelocationX={"center"}
+                            ImagelocationY={"center"}
+                            Imgwidth={70}
+                            Imgheight={45}
+                            ImageMarginTop={10}
+                            ImageMarginLeft={0}
                             text={`TRAFİK
 İŞARETLERİ`}
                             btntext={"Detaylı Bilgi"}
