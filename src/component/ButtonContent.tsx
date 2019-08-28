@@ -27,17 +27,22 @@ ButtonContent.propTypes = {
 };
 const styles = StyleSheet.create({
     button: {
-        paddingVertical: 7,
-        paddingHorizontal: 8,
         borderRadius: 13,
         alignItems: "center",
+        justifyContent: "center",
+        paddingHorizontal:7,
+        paddingVertical:2,
     },
     box: {
-        flex: 5
+        flex: 5,
+        alignItems: "flex-start",
+        justifyContent: "center",
     },
     container: {
-        flex: 3,
+        marginTop:5,
+        flex: 5,
         flexDirection: "row",
-        paddingTop: 5,
+        justifyContent: "center",
+        alignItems: "flex-start"
     },
 });

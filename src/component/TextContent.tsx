@@ -19,11 +19,16 @@ TextContent.propTypes = {
 const styles = StyleSheet.create({
     text: {
         fontWeight: "bold",
-        fontSize: 11,
-        color: "black"
+        fontSize: 9,
+        color: "black",
+
     },
     container: {
+
         flex: 3,
-        paddingTop: 5,
+        alignItems:"flex-start",
+        justifyContent:"flex-end",
+        marginTop: 15,
+
     },
 });

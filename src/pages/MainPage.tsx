@@ -84,7 +84,7 @@ TANITIM VİDEOSU`}
                         <Content
                             imgSource={require('../assets/1x/play.png')}
                             circlebg={"#FBE7C7"}
-                            Imgwidth={40}
+                            Imgwidth={45}
                             Imgheight={40}
                             ImagelocationX={"center"}
                             ImagelocationY={"flex-start"}
