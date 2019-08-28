@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
 export default class ContactPage extends Component {
+    static navigationOptions = {
+        title: 'Contact',
+    };
   render() {
     return (
       <View style={styles.container}>

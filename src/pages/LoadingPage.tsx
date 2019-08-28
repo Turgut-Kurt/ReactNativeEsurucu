@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import { StyleSheet, Text, View,Image } from 'react-native';
 import {CirclesLoader,TextLoader,} from 'react-native-indicator';
 export default class LoadingPage extends Component {
+    static navigationOptions = {
+        title: 'Loading',
+    };
   render() {
 
     return (

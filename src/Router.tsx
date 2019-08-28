@@ -1,18 +1,18 @@
 import {createStackNavigator, createAppContainer, createDrawerNavigator} from 'react-navigation'; //react navigation imp ettiğimiz yer
 
-import HomePage from './pages/HomePage';
 import DetailPage from './pages/DetailPage';
 import MainPage from './pages/MainPage';
 import LoadingPage from './pages/LoadingPage';
-import ContactPage from './pages/ContactPage';
-
-
+import EsinavPage from './pages/EsinavPage';
+import DireksiyonPage from './pages/DireksiyonPage';
+import MotosikletPage from './pages/MotosikletPage';
+import OnlineKitapPage from './pages/OnlineKitapPage';
+import EhliyetSiniflariPage from './pages/EhliyetSiniflariPage';
+import EhliyetRandevuPage from './pages/EhliyetRandevuPage';
+import EgitimAlaniPage from './pages/EgitimAlaniPage';
+import OnlineKayitPage from './pages/OnlineKayitPage';
+import TrafikIsaretPage from './pages/TrafikIsaretPage';
 const AppNavigator = createStackNavigator({
-    Home: {
-        screen: HomePage,
-
-
-    },
     Detail: {
         screen: DetailPage
     },
@@ -21,23 +21,44 @@ const AppNavigator = createStackNavigator({
     },
     LoadingPage: {
         screen: LoadingPage
-    }
+    },
+    EsinavPage: {
+        screen: EsinavPage
+    },
+    DireksiyonPage: {
+        screen: DireksiyonPage
+    },
+    MotosikletPage: {
+        screen: MotosikletPage
+    },
+    OnlineKitapPage: {
+        screen: OnlineKitapPage
+    },
+    EhliyetSiniflariPage: {
+        screen: EhliyetSiniflariPage
+    },
+    EhliyetRandevuPage: {
+        screen: EhliyetRandevuPage
+    },
+    EgitimAlaniPage: {
+        screen: EgitimAlaniPage
+    },
+    TrafikIsaretPage: {
+        screen: TrafikIsaretPage
+    },
 
 }, {
-    initialRouteName: 'MainPage',
+    initialRouteName: 'TrafikIsaretPage',
     headerMode: "none"
 });
-const ContactStack = createStackNavigator({
-    Contact: {
-        screen: ContactPage
-    }
-});
+
 const Drawer = createDrawerNavigator({
-    Anasayfa: {
-        screen: AppNavigator
+        Home: {
+            screen: AppNavigator
+        },
+
     },
-    İletişim: {
-        screen: ContactStack
-    }
-});
+    {
+        initialRouteName: 'Home'
+    });
 export default createAppContainer(Drawer);

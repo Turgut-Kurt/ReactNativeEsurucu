@@ -5,39 +5,64 @@ import Content from '../component/Content';
 import ButtonFooter from '../component/ButtonFooter';
 import LoadingPage from './LoadingPage';
 import HeadGradient from "../component/HeadGradient";
+import HeadTop from "../component/HeadTop";
+import HeadBodyImage from "../component/HeadBodyImage";
+import HeadBodyText from "../component/HeadBodyText";
 
 
-
-export default class extends Component {
+export default class MainPage extends Component {
     constructor(props) {
         super(props);
 
         this.state = {isLoading: true}
     }
-    performTimeConsumingTask = async() => {
+
+    performTimeConsumingTask = async () => {
         return new Promise((resolve) =>
             setTimeout(
-                () => { resolve('result') },
-                30
+                () => {
+                    resolve('result')
+                },
+                200
             )
         );
     };
+
     async componentDidMount() {
 
         const data = await this.performTimeConsumingTask();
 
         if (data !== null) {
-            this.setState({ isLoading: false });
+            this.setState({isLoading: false});
         }
     }
+
     render() {
         if (this.state.isLoading) {
             return <LoadingPage/>;
         }
         return (
             <View style={styles.container}>
-                <HeadGradient/>
 
+                <View style={styles.container1}>
+                    <HeadGradient
+                        colors={['#065CAB', '#0771E7', '#25b3ff']}
+                        borderColor={"#00296E"}
+                    />
+                    <HeadTop/>
+                    <HeadBodyImage
+                        imgSource={require('../assets/1x/ozgunes.png')}
+                        locationX="center"
+                        locationY="center"/>
+                    <HeadBodyText
+                        text={"ÖZGÜNEŞ SÜRÜCÜ KURSU"}
+                        fontSize={15}
+                        textcolor={"white"}
+                        locationX="center"
+                        locationY="flex-start"
+                    />
+
+                </View>
                 <View style={styles.content}>
                     <View style={styles.contentFlex}>
                         <Content
@@ -156,38 +181,37 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         flexDirection: "column",
-
+        backgroundColor: "#EBEBEB",
     },
-
+    container1: {
+        flex: 36,
+        flexDirection: "column",
+        alignItems:"center",
+        justifyContent:"center",
+        backgroundColor: null,
+    },
     content: {
         flex: 55,
-        backgroundColor: 'white',
+        //backgroundColor: 'white',
     },
     contentFlex: {
         flex: 11,
         flexDirection: "row",
-        backgroundColor: 'red',
+        //backgroundColor: 'red',
     },
-
     content3: {
         flex: 2,
-        backgroundColor: 'yellow',
     },
     footer: {
         flex: 9,
         flexDirection: "row",
-        backgroundColor: 'red',
     },
-
-
     ImageContent: {
         flex: 2,
         flexDirection: "row",
-        backgroundColor: 'white',
         alignItems: "flex-start",
         justifyContent: "center",
         paddingLeft: 10,
+        backgroundColor: "#EBEBEB",
     },
-
-
 });

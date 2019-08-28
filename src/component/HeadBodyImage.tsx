@@ -3,7 +3,7 @@ import {StyleSheet, Text, View, Image} from 'react-native';
 import PropTypes from 'prop-types';
 
 
-export default class HeadBodyIcon extends Component {
+export default class HeadBodyImage extends Component {
     render() {
         const locationX = this.props.locationX;
         const locationY = this.props.locationY;
@@ -18,45 +18,43 @@ export default class HeadBodyIcon extends Component {
                     />
 
                 </View>
-                <Text style={styles(null,null).text}>ÖZGÜNEŞ SÜRÜCÜ KURSU</Text>
             </View>
         );
     }
 }
-HeadBodyIcon.propTypes = {
+HeadBodyImage.propTypes = {
     imgSource: PropTypes.number.isRequired,
     locationX: PropTypes.string.isRequired,
     locationY: PropTypes.string.isRequired,
 };
 const styles = (locationX, locationY) => StyleSheet.create({
     main: {
-
-        flex: 28,
-        flexDirection:"column",
+        flex: 20,
+        flexDirection: "column",
         alignItems: locationX,
         justifyContent: locationY,
-
+        width: "100%",
     },
     img: {
 
-        width: 80,
-        height: 80,
-        borderRadius: 40,
+        width: 90,
+        height: 90,
+        borderRadius: 45,
         resizeMode: "cover",
     },
     frame: {
 
         alignItems: "center",
         justifyContent: "center",
-        width: 110,
-        height: 110,
+        width: 120,
+        height: 120,
         borderWidth: 10,
         borderColor: '#2187FF',
-        borderRadius: 55,
+        borderRadius: 60,
     },
     text: {
-        fontWeight:"bold",
-        color:"white"
+        fontWeight: "bold",
+        color: "white"
     }
 
 });
