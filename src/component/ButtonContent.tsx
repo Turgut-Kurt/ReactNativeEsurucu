@@ -4,16 +4,17 @@ import PropTypes from 'prop-types';
 
 export default class ButtonContent extends Component {
     render() {
+
         const btntext = this.props.btntext;
         const btnbgColor = this.props.btnbgColor;
         const btntextcolor = this.props.btntextcolor;
+        const func = this.props.func;
 
         return (
             <View style={styles.container}>
                 <View style={styles.box}>
                     <TouchableOpacity
-                        //onPress={() => navigate('EhliyetRandevuPage', { navigation: this.props.navigation })}
-                        //onPress={() => navigate('EhliyetRandevuPage')}
+                        onPress={func}
 
                         style={[styles.button, {backgroundColor: btnbgColor}]}>
                         <Text style={{color: btntextcolor, fontSize: 8,}}>{btntext}</Text>
@@ -34,8 +35,8 @@ const styles = StyleSheet.create({
         borderRadius: 13,
         alignItems: "center",
         justifyContent: "center",
-        paddingHorizontal:7,
-        paddingVertical:2,
+        paddingHorizontal: 7,
+        paddingVertical: 2,
     },
     box: {
         flex: 5,
@@ -43,7 +44,7 @@ const styles = StyleSheet.create({
         justifyContent: "center",
     },
     container: {
-        marginTop:5,
+        marginTop: 5,
         flex: 5,
         flexDirection: "row",
         justifyContent: "center",

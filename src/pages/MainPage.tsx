@@ -38,6 +38,7 @@ export default class MainPage extends Component {
     }
 
     render() {
+        const {navigate} = this.props.navigation;
         if (this.state.isLoading) {
             return <LoadingPage/>;
         }
@@ -85,6 +86,9 @@ TANITIM VİDEOSU`}
                             btntext={"HEMEN İZLE"}
                             btnbgColor={"black"}
                             btntextcolor={"white"}
+                            func={() => {
+                                navigate("EsinavPage");
+                            }}
 
                         />
                         <Content
@@ -101,6 +105,9 @@ SINAVI VİDEOSU`}
                             btntext={"HEMEN İZLE"}
                             btnbgColor={"black"}
                             btntextcolor={"white"}
+                            func={() => {
+                                navigate("DireksiyonPage");
+                            }}
                         />
                     </View>
                     <View style={styles.contentFlex}>
@@ -118,6 +125,9 @@ SINAV VİDEOSU`}
                             btntext={"HEMEN İZLE"}
                             btnbgColor={"black"}
                             btntextcolor={"white"}
+                            func={() => {
+                                navigate("MotosikletPage");
+                            }}
                         />
                         <Content
                             imgSource={require('../assets/1x/book.png')}
@@ -133,6 +143,9 @@ KİTAP`}
                             btntext={"İNCELE"}
                             btnbgColor={"black"}
                             btntextcolor={"white"}
+                            func={() => {
+                                navigate("OnlineKitapPage");
+                            }}
                         />
                     </View>
                     <View style={styles.contentFlex}>
@@ -150,6 +163,9 @@ SINAVLARI`}
                             btntext={"Detaylı Bilgi"}
                             btnbgColor={"black"}
                             btntextcolor={"white"}
+                            func={() => {
+                                navigate("EhliyetSiniflariPage");
+                            }}
                         />
                         <Content
                             imgSource={require('../assets/1x/takvim.png')}
@@ -165,6 +181,9 @@ RANDEVUSU`}
                             btntext={"Randevu Al"}
                             btnbgColor={"black"}
                             btntextcolor={"white"}
+                            func={() => {
+                                navigate("EhliyetRandevuPage");
+                            }}
                         />
                     </View>
                     <View style={styles.contentFlex}>
@@ -182,6 +201,9 @@ ALANI`}
                             btntext={"Detaylı Bilgi"}
                             btnbgColor={"black"}
                             btntextcolor={"white"}
+                            func={() => {
+                                navigate("EgitimAlaniPage");
+                            }}
                         />
                         <Content
                             imgSource={require('../assets/1x/touch.png')}
@@ -197,6 +219,9 @@ KAYIT`}
                             btntext={"Kayıt Ol"}
                             btnbgColor={"black"}
                             btntextcolor={"white"}
+                            func={() => {
+                                navigate("OnlineKayitPage");
+                            }}
                         />
                     </View>
                     <View style={styles.contentFlex}>
@@ -214,6 +239,9 @@ KAYIT`}
                             btntext={"Detaylı Bilgi"}
                             btnbgColor={"black"}
                             btntextcolor={"white"}
+                            func={() => {
+                                navigate("TrafikIsaretPage");
+                            }}
                         />
                         <View style={styles.ImageContent}></View>
                     </View>
@@ -247,8 +275,8 @@ const styles = StyleSheet.create({
     container1: {
         flex: 36,
         flexDirection: "column",
-        alignItems:"center",
-        justifyContent:"center",
+        alignItems: "center",
+        justifyContent: "center",
         backgroundColor: null,
     },
     content: {

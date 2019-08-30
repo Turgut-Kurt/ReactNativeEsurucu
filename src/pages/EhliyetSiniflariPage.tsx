@@ -22,7 +22,7 @@ export default class EhliyetSiniflariPage extends Component {
                         MiddleimgSource={require('../assets/1x/e-suruculogo.png')}
                     />
                     <HeadBodyText
-                        text={"EHLİYET SINIFLARI"}
+                        text={"EHLİYET SINAVLARI"}
                         fontSize={22}
                         textcolor={"white"}
                         locationX="center"

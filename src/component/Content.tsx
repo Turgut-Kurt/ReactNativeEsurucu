@@ -6,6 +6,7 @@ import ImageContent from './ImageContent';
 
 export default class Content extends Component {
     render() {
+
         const ImagelocationX = this.props.ImagelocationX;
         const ImagelocationY = this.props.ImagelocationY;
         const Imgwidth = this.props.Imgwidth;
@@ -18,6 +19,7 @@ export default class Content extends Component {
         const circlebg = this.props.circlebg;
         const ImageMarginTop = this.props.ImageMarginTop;
         const ImageMarginLeft = this.props.ImageMarginLeft;
+        const func = this.props.func;
         return (
             <View style={styles.ImageContent}>
                 <ImageContent
@@ -40,6 +42,7 @@ export default class Content extends Component {
                         btntext={btntext}
                         btnbgColor={btnbgColor}
                         btntextcolor={btntextcolor}
+                        func={func}
                     />
                 </View>
             </View>

@@ -12,6 +12,9 @@ import EhliyetRandevuPage from './pages/EhliyetRandevuPage';
 import EgitimAlaniPage from './pages/EgitimAlaniPage';
 import OnlineKayitPage from './pages/OnlineKayitPage';
 import TrafikIsaretPage from './pages/TrafikIsaretPage';
+
+
+
 const AppNavigator = createStackNavigator({
     Detail: {
         screen: DetailPage
