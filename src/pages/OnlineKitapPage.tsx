@@ -16,13 +16,18 @@ export default class OnlineKitapPage extends Component {
                         colors={['#705840', '#755E4C', '#6D5845']}
                         borderColor={"#524B48"}
                     />
-                    <HeadTop/>
+                    <HeadTop
+                        Middlewidth={65}
+                        Middleheight={65}
+                        MiddleimgSource={require('../assets/1x/e-suruculogo.png')}
+                    />
                     <HeadBodyText
                         text={"ONLİNE KİTAP"}
                         fontSize={22}
                         textcolor={"white"}
                         locationX="center"
                         locationY="flex-start"
+                        TextmarginTop={20}
 
                     />
                     <HeadBodyImage2

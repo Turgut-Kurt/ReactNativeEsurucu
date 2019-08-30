@@ -16,14 +16,18 @@ export default class OnlineKayitPage extends Component {
                         colors={['#424242', '#3B3B3B', '#454545']}
                         borderColor={"#0E0E0E"}
                     />
-                    <HeadTop/>
+                    <HeadTop
+                        Middlewidth={65}
+                        Middleheight={65}
+                        MiddleimgSource={require('../assets/1x/e-suruculogo.png')}
+                    />
                     <HeadBodyText
                         text={"ONLİNE KAYIT"}
                         fontSize={22}
                         textcolor={"white"}
                         locationX="center"
                         locationY="flex-start"
-
+                        TextmarginTop={20}
                     />
                     <HeadBodyImage2
                         imgSource={require('../assets/1x/touch.png')}

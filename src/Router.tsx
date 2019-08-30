@@ -55,13 +55,6 @@ const AppNavigator = createStackNavigator({
     headerMode: "none"
 });
 
-const Drawer = createDrawerNavigator({
-        Home: {
-            screen: AppNavigator
-        },
 
-    },
-    {
-        initialRouteName: 'Home'
-    });
-export default createAppContainer(Drawer);
+export default createAppContainer(AppNavigator);
+//export default AppNavigator;

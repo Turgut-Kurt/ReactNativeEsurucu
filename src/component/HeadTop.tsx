@@ -6,6 +6,9 @@ import HeadRightIcon from "./HeadRightIcon";
 
 export default class HeadTop extends Component {
     render() {
+        const Middlewidth = this.props.Middlewidth;
+        const Middleheight = this.props.Middleheight;
+        const MiddleimgSource = this.props.MiddleimgSource;
         return (
             <View style={styles.topheader}>
                 <DrawerButton
@@ -18,11 +21,11 @@ export default class HeadTop extends Component {
                 <View style={styles.freeSpace1}></View>
                 <View style={styles.freeSpace2}><Text></Text></View>
                 <HeadMiddleImage
-                    MiddleimgSource={require('../assets/1x/e-surucu3.png')}
+                    MiddleimgSource={MiddleimgSource}
                     MiddlelocationX="center"
                     MiddlelocationY="flex-start"
-                    Middlewidth={50}
-                    Middleheight={50}
+                    Middlewidth={Middlewidth}
+                    Middleheight={Middleheight}
                 />
                 <View style={styles.freeSpace2}><Text> </Text></View>
                 <HeadRightIcon

@@ -17,14 +17,18 @@ export default class DireksiyonPage extends Component {
                         colors={['#2B2F34', '#2C2F34', '#2A2F35']}
                         borderColor={"#13171A"}
                     />
-                    <HeadTop/>
+                    <HeadTop
+                        Middlewidth={65}
+                        Middleheight={65}
+                        MiddleimgSource={require('../assets/1x/e-suruculogo.png')}
+                    />
                     <HeadBodyText
                         text={"DİREKSİYON SINAVI VİDEOSU"}
                         fontSize={22}
                         textcolor={"white"}
                         locationX="center"
                         locationY="flex-start"
-
+                        TextmarginTop={20}
                     />
                     <HeadBodyImage2
                         imgSource={require('../assets/1x/play.png')}

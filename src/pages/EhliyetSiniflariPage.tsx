@@ -16,14 +16,18 @@ export default class EhliyetSiniflariPage extends Component {
                         colors={['#DA610E', '#DC620C', '#DB620F']}
                         borderColor={"#A04807"}
                     />
-                    <HeadTop/>
+                    <HeadTop
+                        Middlewidth={65}
+                        Middleheight={65}
+                        MiddleimgSource={require('../assets/1x/e-suruculogo.png')}
+                    />
                     <HeadBodyText
                         text={"EHLİYET SINIFLARI"}
                         fontSize={22}
                         textcolor={"white"}
                         locationX="center"
                         locationY="flex-start"
-
+                        TextmarginTop={20}
                     />
                     <HeadBodyImage2
                         imgSource={require('../assets/1x/student.png')}

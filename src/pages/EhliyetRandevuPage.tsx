@@ -8,7 +8,9 @@ import HeadBodyImage2 from "../component/HeadBodyImage2";
 import HeadBodyImage from "../component/HeadBodyImage";
 
 export default class EhliyetRandevuPage extends Component {
+
     render() {
+
         return (
             <View style={styles.container}>
                 <View style={styles.container1}>
@@ -16,14 +18,18 @@ export default class EhliyetRandevuPage extends Component {
                         colors={['#272727', '#2C2C2C', '#252525']}
                         borderColor={"#180D16"}
                     />
-                    <HeadTop/>
+                    <HeadTop
+                        Middlewidth={65}
+                        Middleheight={65}
+                        MiddleimgSource={require('../assets/1x/e-suruculogo.png')}
+                    />
                     <HeadBodyText
                         text={"EHLİYET RANDEVUSU"}
                         fontSize={22}
                         textcolor={"white"}
                         locationX="center"
                         locationY="flex-start"
-
+                        TextmarginTop={20}
                     />
                     <HeadBodyImage2
                         imgSource={require('../assets/1x/takvim.png')}

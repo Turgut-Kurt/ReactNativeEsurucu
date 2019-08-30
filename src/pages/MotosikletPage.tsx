@@ -16,14 +16,18 @@ export default class MotosikletPage extends Component {
                         colors={['#3780A2', '#3B7EA4', '#3A7EA1']}
                         borderColor={"#145372"}
                     />
-                    <HeadTop/>
+                    <HeadTop
+                        Middlewidth={65}
+                        Middleheight={65}
+                        MiddleimgSource={require('../assets/1x/e-suruculogo.png')}
+                    />
                     <HeadBodyText
                         text={"MOTOSİKET SINAV VİDEOSU"}
                         fontSize={22}
                         textcolor={"white"}
                         locationX="center"
                         locationY="flex-start"
-
+                        TextmarginTop={20}
                     />
                     <HeadBodyImage2
                         imgSource={require('../assets/1x/motor.png')}

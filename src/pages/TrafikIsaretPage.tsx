@@ -16,13 +16,18 @@ export default class TrafikIsaretPage extends Component {
                         colors={['#D6911B', '#D29222', '#C29C1B']}
                         borderColor={"#091111"}
                     />
-                    <HeadTop/>
+                    <HeadTop
+                        Middlewidth={65}
+                        Middleheight={65}
+                        MiddleimgSource={require('../assets/1x/e-suruculogo.png')}
+                    />
                     <HeadBodyText
                         text={"TRAFİK İŞARETLERİ"}
                         fontSize={22}
                         textcolor={"white"}
                         locationX="center"
                         locationY="flex-start"
+                        TextmarginTop={20}
 
                     />
                     <HeadBodyImage2

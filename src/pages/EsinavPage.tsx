@@ -16,14 +16,18 @@ export default class EsinavPage extends Component {
                         colors={['#D20709', '#C90C05', '#D60606']}
                         borderColor={"#770202"}
                     />
-                    <HeadTop/>
+                    <HeadTop
+                        Middlewidth={65}
+                        Middleheight={65}
+                        MiddleimgSource={require('../assets/1x/e-suruculogo.png')}
+                    />
                     <HeadBodyText
                         text={"E-SINAV TANITIM VİDEOSU"}
                         fontSize={22}
                         textcolor={"white"}
                         locationX="center"
                         locationY="flex-start"
-
+                        TextmarginTop={20}
                     />
                     <HeadBodyImage2
                         imgSource={require('../assets/1x/Cine_Camera_PNG_Clip_Art-1685.png')}

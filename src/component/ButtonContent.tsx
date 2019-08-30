@@ -7,10 +7,14 @@ export default class ButtonContent extends Component {
         const btntext = this.props.btntext;
         const btnbgColor = this.props.btnbgColor;
         const btntextcolor = this.props.btntextcolor;
+
         return (
             <View style={styles.container}>
                 <View style={styles.box}>
                     <TouchableOpacity
+                        //onPress={() => navigate('EhliyetRandevuPage', { navigation: this.props.navigation })}
+                        //onPress={() => navigate('EhliyetRandevuPage')}
+
                         style={[styles.button, {backgroundColor: btnbgColor}]}>
                         <Text style={{color: btntextcolor, fontSize: 8,}}>{btntext}</Text>
                     </TouchableOpacity>

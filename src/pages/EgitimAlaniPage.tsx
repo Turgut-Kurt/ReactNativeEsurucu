@@ -16,14 +16,18 @@ export default class EgitimAlaniPage extends Component {
                         colors={['#FEA001', '#FFA102', '#FAA604']}
                         borderColor={"#150B04"}
                     />
-                    <HeadTop/>
+                    <HeadTop
+                        Middlewidth={65}
+                        Middleheight={65}
+                        MiddleimgSource={require('../assets/1x/e-suruculogo.png')}
+                    />
                     <HeadBodyText
                         text={"EĞİTİM ALANI"}
                         fontSize={22}
                         textcolor={"white"}
                         locationX="center"
                         locationY="flex-start"
-
+                        TextmarginTop={20}
                     />
                     <HeadBodyImage2
                         imgSource={require('../assets/1x/path.png')}

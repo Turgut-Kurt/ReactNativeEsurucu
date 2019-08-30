@@ -8,7 +8,6 @@ import HeadGradient from "../component/HeadGradient";
 import HeadTop from "../component/HeadTop";
 import HeadBodyImage from "../component/HeadBodyImage";
 import HeadBodyText from "../component/HeadBodyText";
-import ImageContent from "../component/ImageContent";
 
 
 export default class MainPage extends Component {
@@ -50,7 +49,11 @@ export default class MainPage extends Component {
                         colors={['#065CAB', '#0771E7', '#25b3ff']}
                         borderColor={"#00296E"}
                     />
-                    <HeadTop/>
+                    <HeadTop
+                        Middlewidth={50}
+                        Middleheight={50}
+                        MiddleimgSource={require('../assets/1x/e-surucu1.png')}
+                    />
                     <HeadBodyImage
                         imgSource={require('../assets/1x/ozgunes.png')}
                         locationX="center"
@@ -61,6 +64,8 @@ export default class MainPage extends Component {
                         textcolor={"white"}
                         locationX="center"
                         locationY="flex-start"
+                        TextmarginTop={0}
+
                     />
 
                 </View>
@@ -80,6 +85,7 @@ TANITIM VİDEOSU`}
                             btntext={"HEMEN İZLE"}
                             btnbgColor={"black"}
                             btntextcolor={"white"}
+
                         />
                         <Content
                             imgSource={require('../assets/1x/play.png')}
