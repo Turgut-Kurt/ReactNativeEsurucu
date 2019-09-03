@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {StyleSheet, Text, View} from 'react-native';
 
 import LinearGradient from 'react-native-linear-gradient';
-import HeadTop from "./HeadTop";
+import PropTypes from 'prop-types';
 
 
 export default class HeadGradient extends Component {
@@ -25,7 +25,10 @@ export default class HeadGradient extends Component {
         );
     }
 }
-
+HeadGradient.propTypes = {
+    colors: PropTypes.any.isRequired,
+    borderColor: PropTypes.string.isRequired,
+};
 const styles = (borderColor) => StyleSheet.create({
     headView: {
         position: "absolute",
@@ -37,6 +40,4 @@ const styles = (borderColor) => StyleSheet.create({
         borderBottomLeftRadius: 1000,
         top: "-110%",
     },
-
-
 });

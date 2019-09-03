@@ -30,6 +30,7 @@ HeadBodyImage2.propTypes = {
     width: PropTypes.number.isRequired,
     height: PropTypes.number.isRequired,
     marginLeft: PropTypes.number.isRequired,
+    marginTop:PropTypes.number.isRequired,
 };
 const styles = (locationX, locationY,width,height,marginLeft,marginTop) => StyleSheet.create({
     main: {

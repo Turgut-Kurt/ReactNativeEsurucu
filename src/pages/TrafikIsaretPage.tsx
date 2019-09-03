@@ -1,27 +1,26 @@
 import React, {Component} from 'react';
 import {StyleSheet, Text, View} from 'react-native';
-import ButtonFooter from '../component/ButtonFooter';
-import HeadGradient from "../component/HeadGradient";
-import HeadTop from "../component/HeadTop";
-import HeadBodyText from "../component/HeadBodyText";
-import HeadBodyImage2 from "../component/HeadBodyImage2";
-import HeadBodyImage from "../component/HeadBodyImage";
+import HeadGradient_new from "../component/HeadGradient_new";
+import HeadTop_new from "../component/HeadTop_new";
+import HeadBodyText_new from "../component/HeadBodyText_new";
+import HeadBodyImage2_new from "../component/HeadBodyImage2_new";
+import ButtonFooter_new from "../component/ButtonFooter_new";
 
 export default class TrafikIsaretPage extends Component {
     render() {
         return (
             <View style={styles.container}>
                 <View style={styles.container1}>
-                    <HeadGradient
+                    <HeadGradient_new
                         colors={['#D6911B', '#D29222', '#C29C1B']}
                         borderColor={"#091111"}
                     />
-                    <HeadTop
+                    <HeadTop_new
                         Middlewidth={65}
                         Middleheight={65}
                         MiddleimgSource={require('../assets/1x/e-suruculogo.png')}
                     />
-                    <HeadBodyText
+                    <HeadBodyText_new
                         text={"TRAFİK İŞARETLERİ"}
                         fontSize={22}
                         textcolor={"white"}
@@ -30,7 +29,7 @@ export default class TrafikIsaretPage extends Component {
                         TextmarginTop={20}
 
                     />
-                    <HeadBodyImage2
+                    <HeadBodyImage2_new
                         imgSource={require('../assets/1x/lamb.png')}
                         locationX="center"
                         locationY="flex-start"
@@ -61,15 +60,15 @@ export default class TrafikIsaretPage extends Component {
 
                 </View>
                 <View style={styles.footer}>
-                    <ButtonFooter
+                    <ButtonFooter_new
                         btnfooterimgSource={require('../assets/1x/facebook.png')}
                         btnfooterbgColor={"#016EDE"}
                     />
-                    <ButtonFooter
+                    <ButtonFooter_new
                         btnfooterimgSource={require('../assets/1x/instagram.png')}
                         btnfooterbgColor={"#DC0AEA"}
                     />
-                    <ButtonFooter
+                    <ButtonFooter_new
                         btnfooterimgSource={require('../assets/1x/whatsapp.png')}
                         btnfooterbgColor={"#21BF00"}
                     />

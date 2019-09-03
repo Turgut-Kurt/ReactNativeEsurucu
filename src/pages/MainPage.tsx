@@ -1,16 +1,17 @@
 import React, {Component} from 'react';
 import {StyleSheet, Text, View} from 'react-native';
-
-import Content from '../component/Content';
-import ButtonFooter from '../component/ButtonFooter';
 import LoadingPage from './LoadingPage';
-import HeadGradient from "../component/HeadGradient";
-import HeadTop from "../component/HeadTop";
-import HeadBodyImage from "../component/HeadBodyImage";
-import HeadBodyText from "../component/HeadBodyText";
+import HeadGradient_new from "../component/HeadGradient_new";
+import HeadTop_new from "../component/HeadTop_new";
+import HeadBodyImage_new from "../component/HeadBodyImage_new";
+import HeadBodyText_new from "../component/HeadBodyText_new";
+import ButtonFooter_new from "../component/ButtonFooter_new";
+import Content_new from "../component/Content_new";
 
 
 export default class MainPage extends Component {
+    private state: { isLoading: boolean };
+
     constructor(props) {
         super(props);
 
@@ -46,20 +47,20 @@ export default class MainPage extends Component {
             <View style={styles.container}>
 
                 <View style={styles.container1}>
-                    <HeadGradient
+                    <HeadGradient_new
                         colors={['#065CAB', '#0771E7', '#25b3ff']}
                         borderColor={"#00296E"}
                     />
-                    <HeadTop
+                    <HeadTop_new
                         Middlewidth={50}
                         Middleheight={50}
                         MiddleimgSource={require('../assets/1x/e-surucu1.png')}
                     />
-                    <HeadBodyImage
+                    <HeadBodyImage_new
                         imgSource={require('../assets/1x/ozgunes.png')}
                         locationX="center"
                         locationY="center"/>
-                    <HeadBodyText
+                    <HeadBodyText_new
                         text={"ÖZGÜNEŞ SÜRÜCÜ KURSU"}
                         fontSize={15}
                         textcolor={"white"}
@@ -72,7 +73,7 @@ export default class MainPage extends Component {
                 </View>
                 <View style={styles.content}>
                     <View style={styles.contentFlex}>
-                        <Content
+                        <Content_new
                             imgSource={require('../assets/1x/Cine_Camera_PNG_Clip_Art-1685.png')}
                             circlebg={"#BEBEBE"}
                             ImagelocationX={"flex-start"}
@@ -91,7 +92,7 @@ TANITIM VİDEOSU`}
                             }}
 
                         />
-                        <Content
+                        <Content_new
                             imgSource={require('../assets/1x/play.png')}
                             circlebg={"#FBE7C7"}
                             Imgwidth={45}
@@ -111,7 +112,7 @@ SINAVI VİDEOSU`}
                         />
                     </View>
                     <View style={styles.contentFlex}>
-                        <Content
+                        <Content_new
                             imgSource={require('../assets/1x/motor.png')}
                             circlebg={"#2D8BA3"}
                             ImagelocationX={"center"}
@@ -129,7 +130,7 @@ SINAV VİDEOSU`}
                                 navigate("MotosikletPage");
                             }}
                         />
-                        <Content
+                        <Content_new
                             imgSource={require('../assets/1x/book.png')}
                             circlebg={"black"}
                             ImagelocationX={"center"}
@@ -149,7 +150,7 @@ KİTAP`}
                         />
                     </View>
                     <View style={styles.contentFlex}>
-                        <Content
+                        <Content_new
                             imgSource={require('../assets/1x/student.png')}
                             circlebg={"#DD6513"}
                             ImagelocationX={"center"}
@@ -158,8 +159,7 @@ KİTAP`}
                             Imgheight={55}
                             ImageMarginTop={0}
                             ImageMarginLeft={0}
-                            text={`EHLİYET
-SINAVLARI`}
+                            text={`EHLİYET SINAVLARI`}
                             btntext={"Detaylı Bilgi"}
                             btnbgColor={"black"}
                             btntextcolor={"white"}
@@ -167,7 +167,7 @@ SINAVLARI`}
                                 navigate("EhliyetSiniflariPage");
                             }}
                         />
-                        <Content
+                        <Content_new
                             imgSource={require('../assets/1x/takvim.png')}
                             circlebg={"black"}
                             ImagelocationX={"flex-start"}
@@ -176,8 +176,7 @@ SINAVLARI`}
                             Imgheight={60}
                             ImageMarginTop={0}
                             ImageMarginLeft={0}
-                            text={`EHLİYET
-RANDEVUSU`}
+                            text={`EHLİYET RANDEVUSU`}
                             btntext={"Randevu Al"}
                             btnbgColor={"black"}
                             btntextcolor={"white"}
@@ -187,7 +186,7 @@ RANDEVUSU`}
                         />
                     </View>
                     <View style={styles.contentFlex}>
-                        <Content
+                        <Content_new
                             imgSource={require('../assets/1x/path.png')}
                             circlebg={"#F9B200"}
                             ImagelocationX={"center"}
@@ -205,7 +204,7 @@ ALANI`}
                                 navigate("EgitimAlaniPage");
                             }}
                         />
-                        <Content
+                        <Content_new
                             imgSource={require('../assets/1x/touch.png')}
                             circlebg={"#97A09B"}
                             ImagelocationX={"flex-start"}
@@ -225,7 +224,7 @@ KAYIT`}
                         />
                     </View>
                     <View style={styles.contentFlex}>
-                        <Content
+                        <Content_new
                             imgSource={require('../assets/1x/lamb.png')}
                             circlebg={"#F1A81A"}
                             ImagelocationX={"center"}
@@ -248,15 +247,15 @@ KAYIT`}
 
                 </View>
                 <View style={styles.footer}>
-                    <ButtonFooter
+                    <ButtonFooter_new
                         btnfooterimgSource={require('../assets/1x/facebook.png')}
                         btnfooterbgColor={"#016EDE"}
                     />
-                    <ButtonFooter
+                    <ButtonFooter_new
                         btnfooterimgSource={require('../assets/1x/instagram.png')}
                         btnfooterbgColor={"#DC0AEA"}
                     />
-                    <ButtonFooter
+                    <ButtonFooter_new
                         btnfooterimgSource={require('../assets/1x/whatsapp.png')}
                         btnfooterbgColor={"#21BF00"}
                     />

@@ -1,13 +1,10 @@
 import React from 'react';
 import {StyleSheet, View,ViewStyle} from 'react-native';
-import ButtonContent from './ButtonContent';
-import TextContent from './TextContent';
-import ImageContent from './ImageContent';
 import ImageContent_new from "./ImageContent_new";
 import TextContent_new from "./TextContent_new";
 import ButtonContent_new from "./ButtonContent_new";
 
-const Content = (props:ContentProps) => {
+const Content_new = (props:ContentProps) => {
     return(
         <View style={[styles.ImageContent, props.style]}>
             <ImageContent_new
@@ -51,7 +48,7 @@ interface ContentProps {
     ImageMarginTop : number;
     ImageMarginLeft : number;
     style:StyleSheet<ViewStyle>
-    func : () => {};
+    func : string;
 }
 
 const styles = StyleSheet.create({
@@ -71,4 +68,4 @@ const styles = StyleSheet.create({
     },
 });
 
-export default Content;
+export default Content_new;
