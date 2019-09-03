@@ -37,8 +37,11 @@ export default class MainPage extends Component {
             this.setState({isLoading: false});
         }
     }
-
+    toggleMenu = () => {
+      this.props.navigation.toggleDrawer();
+    };
     render() {
+        const { goBack}=this.props.navigation;
         const {navigate} = this.props.navigation;
         if (this.state.isLoading) {
             return <LoadingPage/>;
@@ -56,7 +59,7 @@ export default class MainPage extends Component {
                         Middleheight={50}
                         MiddleimgSource={require('../assets/1x/e-surucu1.png')}
                         drawername={"ios-menu"}
-
+                        headfunc={this.toggleMenu}
                     />
                     <HeadBodyImage_new
                         imgSource={require('../assets/1x/ozgunes.png')}
