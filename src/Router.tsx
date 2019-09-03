@@ -55,17 +55,7 @@ const AppNavigator = createStackNavigator({
 
 }, {
     initialRouteName: 'MainPage',
-    headerBackTitleVisible: true,
-    defaultNavigationOptions: {
-        headerBackTitle: 'Geri',
-        headerStyle: {
-            backgroundColor: "transparent"
-        },
-        headerTintColor: 'blue',
-        headerTitleStyle: {
-            fontWeight: 'bold',
-        }
-    },
+    headerMode: "none"
 });
 
 

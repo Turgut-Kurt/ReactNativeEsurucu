@@ -55,6 +55,8 @@ export default class MainPage extends Component {
                         Middlewidth={50}
                         Middleheight={50}
                         MiddleimgSource={require('../assets/1x/e-surucu1.png')}
+                        drawername={"ios-menu"}
+
                     />
                     <HeadBodyImage_new
                         imgSource={require('../assets/1x/ozgunes.png')}

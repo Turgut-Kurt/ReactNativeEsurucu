@@ -4,6 +4,8 @@ interface HeadTopProps {
     Middlewidth :number,
     Middleheight :number,
     MiddleimgSource:any,
+    drawername:string,
+    headfunc : any;
 }
 import React, {Component} from 'react';
 import {StyleSheet, Text, View} from 'react-native';
@@ -16,11 +18,12 @@ const HeadTop_new = (props:HeadTopProps)  => {
     return(
         <View style={styles.topheader}>
             <DrawerButton_new
-                drawersize={36}
-                drawername={"ios-menu"}
+                drawersize={40}
+                drawername={props.drawername}
                 drawercolor={"white"}
                 drawerlocationX="flex-end"
                 drawerlocationY="center"
+                headfunc={props.headfunc}
             />
             <View style={styles.freeSpace1}></View>
             <View style={styles.freeSpace2}><Text></Text></View>

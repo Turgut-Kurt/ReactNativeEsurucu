@@ -8,6 +8,7 @@ import HeadBodyImage2_new from "../component/HeadBodyImage2_new";
 
 export default class MotosikletPage extends Component {
     render() {
+        const { goBack}=this.props.navigation;
         return (
             <View style={styles.container}>
                 <View style={styles.container1}>
@@ -19,6 +20,8 @@ export default class MotosikletPage extends Component {
                         Middlewidth={65}
                         Middleheight={65}
                         MiddleimgSource={require('../assets/1x/e-suruculogo.png')}
+                        drawername={"ios-arrow-round-back"}
+                        headfunc={() => {goBack();}}
                     />
                     <HeadBodyText_new
                         text={"MOTOSİKET SINAV VİDEOSU"}

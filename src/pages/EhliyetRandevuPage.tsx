@@ -9,7 +9,8 @@ import ButtonFooter_new from "../component/ButtonFooter_new";
 export default class EhliyetRandevuPage extends Component {
 
     render() {
-
+        
+        const { goBack}=this.props.navigation;
         return (
             <View style={styles.container}>
                 <View style={styles.container1}>
@@ -21,6 +22,8 @@ export default class EhliyetRandevuPage extends Component {
                         Middlewidth={65}
                         Middleheight={65}
                         MiddleimgSource={require('../assets/1x/e-suruculogo.png')}
+                        drawername={"ios-arrow-round-back"}
+                        headfunc={() => {goBack();}}
                     />
                     <HeadBodyText_new
                         text={"EHLİYET RANDEVUSU"}
