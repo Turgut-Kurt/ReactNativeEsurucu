@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {StyleSheet, Text, View} from 'react-native';
 import PropTypes from 'prop-types';
-
+z
 export default class HeadBodyText extends Component {
     render() {
         const text = this.props.text;

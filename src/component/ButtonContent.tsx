@@ -15,7 +15,6 @@ export default class ButtonContent extends Component {
                 <View style={styles.box}>
                     <TouchableOpacity
                         onPress={func}
-
                         style={[styles.button, {backgroundColor: btnbgColor}]}>
                         <Text style={{color: btntextcolor, fontSize: 8,}}>{btntext}</Text>
                     </TouchableOpacity>

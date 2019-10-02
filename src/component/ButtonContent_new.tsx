@@ -12,7 +12,6 @@ const ButtonContent_new = (props:ButtonContentProps)  => {
             <View style={styles.box}>
                 <TouchableOpacity
                     onPress={props.func}
-
                     style={[styles.button, {backgroundColor: props.btnbgColor}]}>
                     <Text style={{color: props.btntextcolor, fontSize: 8,}}>{props.btntext}</Text>
                 </TouchableOpacity>

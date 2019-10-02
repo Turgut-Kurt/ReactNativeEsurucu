@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {StyleSheet, Text, View} from 'react-native';
+import {StyleSheet, Text, View, ScrollView} from 'react-native';
 import LoadingPage from './LoadingPage';
 import HeadGradient_new from "../component/HeadGradient_new";
 import HeadTop_new from "../component/HeadTop_new";
@@ -24,7 +24,7 @@ export default class MainPage extends Component {
                 () => {
                     resolve('result')
                 },
-                200
+                2000
             )
         );
     };
@@ -37,11 +37,11 @@ export default class MainPage extends Component {
             this.setState({isLoading: false});
         }
     }
+
     toggleMenu = () => {
-      this.props.navigation.toggleDrawer();
+        this.props.navigation.toggleDrawer();
     };
     render() {
-        const { goBack}=this.props.navigation;
         const {navigate} = this.props.navigation;
         if (this.state.isLoading) {
             return <LoadingPage/>;
@@ -77,179 +77,184 @@ export default class MainPage extends Component {
 
                 </View>
                 <View style={styles.content}>
-                    <View style={styles.contentFlex}>
-                        <Content_new
-                            imgSource={require('../assets/1x/Cine_Camera_PNG_Clip_Art-1685.png')}
-                            circlebg={"#BEBEBE"}
-                            ImagelocationX={"flex-start"}
-                            ImagelocationY={"flex-start"}
-                            Imgwidth={63}
-                            Imgheight={60}
-                            ImageMarginTop={0}
-                            ImageMarginLeft={0}
-                            text={`E-SINAV
+                    <ScrollView>
+                        <View style={styles.contentFlex}>
+                            <Content_new
+                                imgSource={require('../assets/1x/Cine_Camera_PNG_Clip_Art-1685.png')}
+                                circlebg={"#BEBEBE"}
+                                ImagelocationX={"flex-start"}
+                                ImagelocationY={"flex-start"}
+                                Imgwidth={63}
+                                Imgheight={60}
+                                ImageMarginTop={0}
+                                ImageMarginLeft={0}
+                                text={`E-SINAV
 TANITIM VİDEOSU`}
-                            btntext={"HEMEN İZLE"}
-                            btnbgColor={"black"}
-                            btntextcolor={"white"}
-                            func={() => {
-                                navigate("EsinavPage");
-                            }}
+                                btntext={"HEMEN İZLE"}
+                                btnbgColor={"black"}
+                                btntextcolor={"white"}
+                                func={() => {
+                                    navigate("EsinavPage");
+                                }}
 
-                        />
-                        <Content_new
-                            imgSource={require('../assets/1x/play.png')}
-                            circlebg={"#FBE7C7"}
-                            Imgwidth={45}
-                            Imgheight={40}
-                            ImagelocationX={"center"}
-                            ImagelocationY={"flex-start"}
-                            ImageMarginTop={0}
-                            ImageMarginLeft={0}
-                            text={`DİREKSİYON
+                            />
+                            <Content_new
+                                imgSource={require('../assets/1x/play.png')}
+                                circlebg={"#FBE7C7"}
+                                Imgwidth={45}
+                                Imgheight={40}
+                                ImagelocationX={"center"}
+                                ImagelocationY={"flex-start"}
+                                ImageMarginTop={0}
+                                ImageMarginLeft={0}
+                                text={`DİREKSİYON
 SINAVI VİDEOSU`}
-                            btntext={"HEMEN İZLE"}
-                            btnbgColor={"black"}
-                            btntextcolor={"white"}
-                            func={() => {
-                                navigate("DireksiyonPage");
-                            }}
-                        />
-                    </View>
-                    <View style={styles.contentFlex}>
-                        <Content_new
-                            imgSource={require('../assets/1x/motor.png')}
-                            circlebg={"#2D8BA3"}
-                            ImagelocationX={"center"}
-                            ImagelocationY={"flex-start"}
-                            Imgwidth={85}
-                            Imgheight={60}
-                            ImageMarginTop={0}
-                            ImageMarginLeft={0}
-                            text={`MOTOSİKLET
+                                btntext={"HEMEN İZLE"}
+                                btnbgColor={"black"}
+                                btntextcolor={"white"}
+                                func={() => {
+                                    navigate("DireksiyonPage");
+                                }}
+                            />
+                        </View>
+                        <View style={styles.contentFlex}>
+                            <Content_new
+                                imgSource={require('../assets/1x/motor.png')}
+                                circlebg={"#2D8BA3"}
+                                ImagelocationX={"center"}
+                                ImagelocationY={"flex-start"}
+                                Imgwidth={85}
+                                Imgheight={60}
+                                ImageMarginTop={0}
+                                ImageMarginLeft={0}
+                                text={`MOTOSİKLET
 SINAV VİDEOSU`}
-                            btntext={"HEMEN İZLE"}
-                            btnbgColor={"black"}
-                            btntextcolor={"white"}
-                            func={() => {
-                                navigate("MotosikletPage");
-                            }}
-                        />
-                        <Content_new
-                            imgSource={require('../assets/1x/book.png')}
-                            circlebg={"black"}
-                            ImagelocationX={"center"}
-                            ImagelocationY={"center"}
-                            Imgwidth={60}
-                            Imgheight={55}
-                            ImageMarginTop={0}
-                            ImageMarginLeft={0}
-                            text={`ONLİNE
+                                btntext={"HEMEN İZLE"}
+                                btnbgColor={"black"}
+                                btntextcolor={"white"}
+                                func={() => {
+                                    navigate("MotosikletPage");
+                                }}
+                            />
+                            <Content_new
+                                imgSource={require('../assets/1x/book.png')}
+                                circlebg={"black"}
+                                ImagelocationX={"center"}
+                                ImagelocationY={"center"}
+                                Imgwidth={60}
+                                Imgheight={55}
+                                ImageMarginTop={0}
+                                ImageMarginLeft={0}
+                                text={`ONLİNE
 KİTAP`}
-                            btntext={"İNCELE"}
-                            btnbgColor={"black"}
-                            btntextcolor={"white"}
-                            func={() => {
-                                navigate("OnlineKitapPage");
-                            }}
-                        />
-                    </View>
-                    <View style={styles.contentFlex}>
-                        <Content_new
-                            imgSource={require('../assets/1x/student.png')}
-                            circlebg={"#DD6513"}
-                            ImagelocationX={"center"}
-                            ImagelocationY={"flex-start"}
-                            Imgwidth={70}
-                            Imgheight={55}
-                            ImageMarginTop={0}
-                            ImageMarginLeft={0}
-                            text={`EHLİYET SINAVLARI`}
-                            btntext={"Detaylı Bilgi"}
-                            btnbgColor={"black"}
-                            btntextcolor={"white"}
-                            func={() => {
-                                navigate("EhliyetSiniflariPage");
-                            }}
-                        />
-                        <Content_new
-                            imgSource={require('../assets/1x/takvim.png')}
-                            circlebg={"black"}
-                            ImagelocationX={"flex-start"}
-                            ImagelocationY={"flex-start"}
-                            Imgwidth={60}
-                            Imgheight={60}
-                            ImageMarginTop={0}
-                            ImageMarginLeft={0}
-                            text={`EHLİYET RANDEVUSU`}
-                            btntext={"Randevu Al"}
-                            btnbgColor={"black"}
-                            btntextcolor={"white"}
-                            func={() => {
-                                navigate("EhliyetRandevuPage");
-                            }}
-                        />
-                    </View>
-                    <View style={styles.contentFlex}>
-                        <Content_new
-                            imgSource={require('../assets/1x/path.png')}
-                            circlebg={"#F9B200"}
-                            ImagelocationX={"center"}
-                            ImagelocationY={"center"}
-                            Imgwidth={50}
-                            Imgheight={52}
-                            ImageMarginTop={0}
-                            ImageMarginLeft={0}
-                            text={`EĞİTİM
+                                btntext={"İNCELE"}
+                                btnbgColor={"black"}
+                                btntextcolor={"white"}
+                                func={() => {
+                                    navigate("OnlineKitapPage");
+                                }}
+                            />
+                        </View>
+                        <View style={styles.contentFlex}>
+                            <Content_new
+                                imgSource={require('../assets/1x/student.png')}
+                                circlebg={"#DD6513"}
+                                ImagelocationX={"center"}
+                                ImagelocationY={"flex-start"}
+                                Imgwidth={70}
+                                Imgheight={55}
+                                ImageMarginTop={0}
+                                ImageMarginLeft={0}
+                                text={`EHLİYET SINAVLARI`}
+                                btntext={"Detaylı Bilgi"}
+                                btnbgColor={"black"}
+                                btntextcolor={"white"}
+                                func={() => {
+                                    navigate("EhliyetSiniflariPage");
+                                }}
+                            />
+                            <Content_new
+                                imgSource={require('../assets/1x/takvim.png')}
+                                circlebg={"black"}
+                                ImagelocationX={"flex-start"}
+                                ImagelocationY={"flex-start"}
+                                Imgwidth={60}
+                                Imgheight={60}
+                                ImageMarginTop={0}
+                                ImageMarginLeft={0}
+                                text={`EHLİYET RANDEVUSU`}
+                                btntext={"Randevu Al"}
+                                btnbgColor={"black"}
+                                btntextcolor={"white"}
+                                func={() => {
+                                    navigate("EhliyetRandevuPage");
+                                }}
+                            />
+                        </View>
+                        <View style={styles.contentFlex}>
+                            <Content_new
+                                imgSource={require('../assets/1x/path.png')}
+                                circlebg={"#F9B200"}
+                                ImagelocationX={"center"}
+                                ImagelocationY={"center"}
+                                Imgwidth={50}
+                                Imgheight={52}
+                                ImageMarginTop={0}
+                                ImageMarginLeft={0}
+                                text={`EĞİTİM
 ALANI`}
-                            btntext={"Detaylı Bilgi"}
-                            btnbgColor={"black"}
-                            btntextcolor={"white"}
-                            func={() => {
-                                navigate("EgitimAlaniPage");
-                            }}
-                        />
-                        <Content_new
-                            imgSource={require('../assets/1x/touch.png')}
-                            circlebg={"#97A09B"}
-                            ImagelocationX={"flex-start"}
-                            ImagelocationY={"center"}
-                            Imgwidth={40}
-                            Imgheight={47}
-                            ImageMarginTop={12}
-                            ImageMarginLeft={12}
-                            text={`ONLİNE
+                                btntext={"Detaylı Bilgi"}
+                                btnbgColor={"black"}
+                                btntextcolor={"white"}
+                                func={() => {
+                                    navigate("EgitimAlaniPage");
+                                }}
+                            />
+                            <Content_new
+                                imgSource={require('../assets/1x/touch.png')}
+                                circlebg={"#97A09B"}
+                                ImagelocationX={"flex-start"}
+                                ImagelocationY={"center"}
+                                Imgwidth={40}
+                                Imgheight={47}
+                                ImageMarginTop={12}
+                                ImageMarginLeft={12}
+                                text={`ONLİNE
 KAYIT`}
-                            btntext={"Kayıt Ol"}
-                            btnbgColor={"black"}
-                            btntextcolor={"white"}
-                            func={() => {
-                                navigate("OnlineKayitPage");
-                            }}
-                        />
-                    </View>
-                    <View style={styles.contentFlex}>
-                        <Content_new
-                            imgSource={require('../assets/1x/lamb.png')}
-                            circlebg={"#F1A81A"}
-                            ImagelocationX={"center"}
-                            ImagelocationY={"center"}
-                            Imgwidth={70}
-                            Imgheight={45}
-                            ImageMarginTop={10}
-                            ImageMarginLeft={0}
-                            text={`TRAFİK
+                                btntext={"Kayıt Ol"}
+                                btnbgColor={"black"}
+                                btntextcolor={"white"}
+                                func={() => {
+                                    navigate("OnlineKayitPage");
+                                }}
+                            />
+                        </View>
+                        <View style={styles.contentFlex}>
+                            <Content_new
+                                imgSource={require('../assets/1x/lamb.png')}
+                                circlebg={"#F1A81A"}
+                                ImagelocationX={"center"}
+                                ImagelocationY={"center"}
+                                Imgwidth={70}
+                                Imgheight={45}
+                                ImageMarginTop={10}
+                                ImageMarginLeft={0}
+                                text={`TRAFİK
 İŞARETLERİ`}
-                            btntext={"Detaylı Bilgi"}
-                            btnbgColor={"black"}
-                            btntextcolor={"white"}
-                            func={() => {
-                                navigate("TrafikIsaretPage");
-                            }}
-                        />
-                        <View style={styles.ImageContent}></View>
-                    </View>
+                                btntext={"Detaylı Bilgi"}
+                                btnbgColor={"black"}
+                                btntextcolor={"white"}
+                                func={() => {
+                                    navigate("TrafikIsaretPage");
+                                }}
+                            />
+                            <View style={styles.ImageContent}></View>
+                        </View>
 
+
+
+
+                    </ScrollView>
                 </View>
                 <View style={styles.footer}>
                     <ButtonFooter_new

@@ -1,14 +1,6 @@
 import DrawerButton_new from "./DrawerButton_new";
-
-interface HeadTopProps {
-    Middlewidth :number,
-    Middleheight :number,
-    MiddleimgSource:any,
-    drawername:string,
-    headfunc : any;
-}
 import React, {Component} from 'react';
-import {StyleSheet, Text, View} from 'react-native';
+import {StyleSheet, Text, View,ViewStyle} from 'react-native';
 import DrawerButton from "./DrawerButton";
 import HeadMiddleImage from "./HeadMiddleImage";
 import HeadRightIcon from "./HeadRightIcon";
@@ -52,7 +44,13 @@ const HeadTop_new = (props:HeadTopProps)  => {
         </View>
     )
 };
-
+interface HeadTopProps {
+    Middlewidth :number,
+    Middleheight :number,
+    MiddleimgSource:any,
+    drawername:string,
+    headfunc : any,
+}
 const styles = StyleSheet.create({
     topheader: {
         flex: 8,

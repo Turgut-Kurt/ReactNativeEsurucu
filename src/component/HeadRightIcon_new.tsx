@@ -1,10 +1,3 @@
-interface HeadRightIconProps {
-    imgSource: number;
-    locationX: string;
-    locationY: string;
-    Rightwidth: number;
-    Rightheight: number;
-}
 
 import React, {Component} from 'react';
 import {StyleSheet, TouchableOpacity, View, Image} from 'react-native';
@@ -24,6 +17,15 @@ const HeadRightIcon_new = (props: HeadRightIconProps) => {
         </TouchableOpacity>
     )
 };
+
+interface HeadRightIconProps {
+    imgSource: number
+    locationX: string
+    locationY: string
+    Rightwidth: number
+    Rightheight: number
+}
+
 const styles = (locationX, locationY,Rightwidth,Rightheight) => StyleSheet.create({
     container: {
 
